@@ -27,6 +27,30 @@
     <title>React App</title>
   </head>
   <body>
+
+<style>
+  #root {
+    display: none; /* در ابتدا مخفی است */
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+</style>
+  
+    <script>
+      function showContent() {
+        const rootDiv = document.getElementById("root");
+        rootDiv.style.display = "block"; // نمایش DIV
+        // تغییر متن دکمه
+        const button = document.getElementById("showContentButton");
+        button.innerText = "محتوا نمایش داده شد";
+        button.disabled = true; // غیرفعال کردن دکمه
+    }
+    </script>
+ 
+    <h1>خوش آمدید!</h1>
+    <button id="showContentButton" onclick="showContent()">به app.js هدایت شوید</button>    
+ 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
